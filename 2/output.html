@@ -1,0 +1,182 @@
+<style>         
+    .truck,
+    .truck *,
+    .truck *::before,
+    .truck *::after {
+        box-sizing: border-box;
+    }
+    body, .truck, .truck * {
+        margin: 0;
+        padding: 0;
+    }
+    .truck {
+        position: relative;
+        width: 1000px;
+        height: 1000px;
+    }
+
+    .truck__wrapper {
+        position: relative;
+        width: 540px;
+        left: 50%;        
+        margin-left: -255px;        
+    }
+
+    .truck__top {
+        position: relative;
+        height: 520px;        
+    }
+
+    .truck__base {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 55px;
+        bottom: 0;        
+        left: 105px;
+        background-color: #000000;
+    }
+
+    .truck__base::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        left: -20px;          
+        background-color: #000000;
+        transform: skewX(-20deg);                     
+    }
+
+    .truck__base::after {
+        content: '';
+        position: absolute;
+        width: 55px;
+        height: 40px;
+        top: -40px;   
+        margin-left: 5px;                               
+        border-radius: 5px 5px 0 0;        
+        border-top: 8px solid #000000;              
+        background-color: #666666;      
+    }
+
+    .truck__flag {
+        content: '';
+        position: absolute;
+        width: 5px;    
+        height: 320px;  
+        left: 30px;        
+        margin-top: -360px;
+        background-color: #999999;        
+    }
+
+    .truck__flag::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        margin-left: -85px;
+        border: 20px solid transparent;
+        border-right: 65px solid #ff0000;
+    }  
+
+    .truck__body {
+        position: relative;
+        width: 100%;
+        height: 15px;
+        margin-top: 50px;        
+        margin-bottom: 140px;
+        border-radius: 10px;
+        background-color: #ff0000;                        
+    }
+
+    .truck__body::before {
+        display: block;
+        content: '';
+        position: relative;
+        width: 530px;
+        height: 50px;
+        top: -50px;
+        margin-left: 5px;        
+        border-top-left-radius: 60px 50px;
+        border-top-right-radius: 240px 50px;        
+        background-color: #d8d8d8;
+    }
+
+    .truck__body::after {
+        content: '';
+        position: absolute;        
+        width: 520px;
+        height: 130px;
+        bottom: -130px;  
+        margin: 0 10px;                                     
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: #f45a3b;
+    }
+
+    .truck__bottom {
+        display: flex;
+        position: relative;
+        background-color: #222222;
+        width: 490px;
+        height: 30px;
+        margin: 0 auto;        
+        margin-top: 10px;
+        margin-bottom: 70px;        
+    }
+
+    .truck__bottom::before {
+        content: '';
+        position: absolute;       
+        margin-top: -10px;
+        width: 100%;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        height: 0;
+        border-bottom: 10px solid #222222;        
+    }
+
+    .truck__bottom::after {
+        content: '';
+        position: absolute;        
+        bottom: -70px;
+        width: 100%;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;        
+        border-top: 70px solid #222222;     
+    }
+
+    .truck__wheel {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: #000000;
+    }
+
+    .truck__wheel-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 10px;
+        z-index: 1;
+    }
+</style>
+<body>
+    <div class="truck">
+        <div class="truck__wrapper">
+            <div class="truck__top">
+                <div class="truck__base">
+                    <div class="truck__flag"></div>
+                </div>
+            </div>
+            <div class="truck__body"></div>
+            <div class="truck__bottom">
+                <div class="truck__wheel-wrapper">
+                    <div class="truck__wheel"></div>
+                    <div class="truck__wheel"></div>
+                    <div class="truck__wheel"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
